@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rain Palace</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <div class="header-container">
+      <div id="left-column" class="column">
+        <nav>
+          <ul>
+            <li>
+              <a href="#" onclick="loadContent('pages/writing.html')"
+                >writing</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="loadContent('pages/tutorials.html')"
+                >tutorials</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="loadContent('pages/projects.html')"
+                >projects</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div id="center-column" class="column">
+        <img src="images/cloud.png" alt="Cloud Image" />
+        <div class="brand">
+          <a href="#" onclick="loadContent('pages/home.html')">rain palace</a>
+        </div>
+        <img src="images/cloud.png" alt="Cloud Image" />
+      </div>
+
+      <div id="right-column" class="column"></div>
+    </div>
+    <div>
+      <section id="content"></section>
+
+      <script>
+        function loadContent(page) {
+          fetch(page)
+            .then((response) => response.text())
+            .then((content) => {
+              document.getElementById("content").innerHTML = content;
+            });
+        }
+
+        loadContent("pages/home.html");
+      </script>
+    </div>
+  </body>
+</html>
