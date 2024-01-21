@@ -41,9 +41,9 @@
 
       <div id="right-column" class="column"></div>
     </div>
+
     <div>
       <section id="content"></section>
-
       <script>
         function loadContent(page) {
           fetch(page)
@@ -52,9 +52,13 @@
               document.getElementById("content").innerHTML = content;
             });
         }
-
         loadContent("pages/home.html");
       </script>
+    </div>
+
+    <div class="contact">
+      <a href=https://github.com/rianp><img src="images/github.png" alt="GitHub" /></a>
+      <a href=https://www.linkedin.com/in/rianpickell><img src="images/linkedin.webp" alt="LinkedIn" /></a>
     </div>
   </body>
 </html>
